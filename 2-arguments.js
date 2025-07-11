@@ -1,19 +1,10 @@
-const noArgument = function(){
-    let one = "No argument";
-    return one;
-};
-let caseONe = noArgument();
-console.log(caseONe);
+const args = process.argv.slice(2);
 
-const oneArgument = function(put){
-    let two = `${put}`;
-    return two;
-};
-let caseTwo = oneArgument("Best Argument found");
-console.log(caseTwo);
-const twoArgument = function(saa, kara){
-    return `${saa} ${kara}`;
-};
-let caseThree = twoArgument("Best School", "Arguments found");
-console.log(caseThree);
+if (args.length === 0) {
+  console.log("No argument");
+} else if (args.length === 1) {
+  console.log("Best Argument found");
+} else {
+  console.log("Best School Arguments found");
+}
 
